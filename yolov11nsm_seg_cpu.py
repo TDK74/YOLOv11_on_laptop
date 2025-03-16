@@ -24,6 +24,9 @@ height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = 0
 
 def fps_calculation(s_time, e_time):
+    """
+    Calculate frames per second.
+    """
     loop_time = e_time - s_time
     fps_func = 1 / loop_time
 
@@ -31,6 +34,9 @@ def fps_calculation(s_time, e_time):
 
 
 def objects_processing(framework):
+    """
+    Process detected objects and draw bounding boxes on the frame.
+    """
     results = model(framework, device='cpu')
 
     for result in results:
