@@ -22,6 +22,9 @@ height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 fps = 0
 
 def fps_calculation(s_time, e_time):
+    """
+    Calculate frames per second.
+    """
     loop_time = e_time - s_time
     fps_func = 1 / loop_time
 
@@ -29,6 +32,9 @@ def fps_calculation(s_time, e_time):
 
 
 def objects_processing(framework):
+    """
+    Process detected objects and draw bounding boxes on the frame.
+    """
     results = model(framework, device='cuda')  # use of GPU for processing
 
     for result in results:
@@ -43,8 +49,8 @@ def objects_processing(framework):
             class_id = class_ids[i]
             label = result.names[class_id]
 
-            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
-            cv2.putText(frame, f'{label} {confidence:.2f}', (x1, y1 - 10),
+            cv2.rectangle(framework, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(framework, f'{label} {confidence:.2f}', (x1, y1 - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
 
     return framework
