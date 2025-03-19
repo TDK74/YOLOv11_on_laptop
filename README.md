@@ -1,7 +1,7 @@
 # YOLOv11_on_laptop
-Quickly Run YOLOv11 for Real-Time Recognition on a Laptop.
+Quickly Run YOLOv11 for Real-Time Recognition on laptop.
 
-Logical continuation of "YOLOv8 on a Laptop".
+Logical continuation of "YOLOv8 on laptop".
 
 ## Setup Environment
 * Laptop: Fujitsu Celcius H780
