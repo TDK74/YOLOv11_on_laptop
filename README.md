@@ -1,4 +1,4 @@
-# YOLOv11_on_laptop
+# YOLOv11 on laptop
 Quickly Run YOLOv11 for Real-Time Recognition on laptop.
 
 Logical continuation of "YOLOv8 on laptop".
